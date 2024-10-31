@@ -14,9 +14,13 @@
   "bin": {
     "tsground": "node lib/index.js"
   },
-  "repository": "",
+  "repository": "https://github.com/xsxz01/tsground.git",
   "homepage": "https://www.iotlearn.cn",
-  "keywords": [],
+  "keywords": [
+    "typescript",
+    "tsground",
+    "playground"
+  ],
   "author": "xsxz01",
   "license": "MIT",
   "devDependencies": {
