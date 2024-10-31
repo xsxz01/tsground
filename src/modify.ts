@@ -5,7 +5,12 @@ import ora from "ora";
 
 const log = ora("modify");
 
-export const modifyPackageJson = function (downloadPath: string, options: any) {
+export const modifyPackageJson = function (downloadPath: string, options: {
+    project_name: string,
+    description: string,
+    author: string,
+    license: string
+}) {
     log.start("start modifying package.json")
     const packagePath = path.join(downloadPath, "package.json");
     if (fs.existsSync(packagePath)) {
@@ -13,9 +18,10 @@ export const modifyPackageJson = function (downloadPath: string, options: any) {
         const template = handlebars.compile(content);
 
         const param = {
-            name: options.project_name,
+            project_name: options.project_name,
             description: options.description,
             author: options.author,
+            license: options.license
         };
 
         const result = template(param);

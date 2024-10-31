@@ -3,7 +3,7 @@ import { Command } from 'commander';
 import { input } from '@inquirer/prompts'
 import { downloadTemplate } from './download';
 import { modifyPackageJson } from './modify';
-const templateGitUrl = "https://github.com/xsxz01/gproxy.git"
+const templateGitUrl = "https://github.com/xsxz01/tsground_template.git"
 const program = new Command()
 
 program
@@ -21,7 +21,7 @@ program
             project_name: await input({ message: 'Project name: ', default: name }),
             description: await input({ message: 'Description: ' }),
             author: await input({ message: 'Author: ' }),
-            license: await input({ message: 'License: ' })
+            license: await input({ message: 'License: ', default: 'MIT' })
         };
         try {
             const downloadPath =`./${initOptions.project_name}`;
