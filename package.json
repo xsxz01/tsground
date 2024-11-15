@@ -1,6 +1,6 @@
 {
   "name": "tsground",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "实时演练typescript代码，提高学习效率，测试代码bug，快速ts项目开发。",
   "main": "lib/index.js",
   "type": "commonjs",
